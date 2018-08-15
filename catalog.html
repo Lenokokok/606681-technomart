@@ -20,7 +20,8 @@
                   <p class="header-contacts-phone">+7 (812) 555-05-55</p>
                   <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
                </div>
-                <!--<div class="header-autorisation">
+               
+                <div class="header-autorisation">
               <div class="header-user">
                    <span class="header-user-name">Равшан Джамшутович</span>
                    <span class="header-autorisation-out"></span>
@@ -29,7 +30,8 @@
                   <li><a class="user-option-item" href="#" >Мои заказы</a></li>
                   <li><a class="user-option-item" href="#" >Личный кабинет</a></li>
                </ul>
-               </div>-->
+               </div>
+               
             </div>
         <nav class="main-navigation">
           <ul class="site-navigation">
@@ -49,7 +51,7 @@
                <li class="breadcrumbs-home"><a href="index.html"></a></li>
                <li><a href="catalog.html">Каталог</a></li>
                <li><a href="instrument.html">Инструмент</a></li>
-               <li><a>Перфораторы</a></li>
+               <li><span>Перфораторы</span></li>
            </ul>
            
             <h2 class="page-title">Перфораторы</h2>
@@ -73,21 +75,25 @@
                 
             </section>
             
-            <section class="sort">
-               <h2 class="sort-title">Сортировка</h2>
-               <ul class="sort-list">
+            <section class="catalog">
+              <header class="catalog-header">
+               <h2 class="catalog-sort-title">Сортировка</h2>
+               
+                  <ul class="catalog-sort-list">
                    <li><span class="sort-button-current">по цене</span></li>
                    <li><span class="sort-button">по типу</span></li>
                    <li><span class="sort-button">по функционалу</span></li>
-                   <li><span class="sort-button-up-current"></span></li>
-                   <li><span class="sort-button-down"></span></li>
-               </ul>
-                
-            </section>
-            <section class="catalog">
+                   </ul>
+               
+               <div class="sort-direction">
+                   <a class="sort-dir active" href="#">Вверх</a>
+                   <a class="sort-dir"></a>
+               </div>
+                </header>
+                <section class="catalog-products">
                 <h2 class="visually-hidden">Каталог</h2>
-                <ul class="catalog-list">
-                      <li class="catalog-item">
+               
+                      <article class="product-card">
                         <div class="popular-item-image"><img src="img/bfg900.jpg" alt="Фотография перфоратора BOSCH BFG 9000" width="184" height="164"></div>
                         <div class="popular-item-controls">
                             <a class="popular-item-controls-btn " href="#">Купить</a> 
@@ -96,10 +102,10 @@
                         <h3>Перфоратор BOSCH BFG 9000</h3>
                         <span class="popular-item-sale">32500 Р.</span>
                         <div class="popular-item-price">25500 Р.</div>
-                    </li>
-                </ul>
-                <ul class="catalog-list">
-                      <li class="catalog-item">
+                    </article>
+                
+                
+                       <article class="product-card">
                         <div class="popular-item-image"><img src="img/bfg900.jpg" alt="Фотография перфоратора BOSCH BFG 9000" width="184" height="164"></div>
                         <div class="popular-item-controls">
                             <a class="popular-item-controls-btn " href="#">Купить</a> 
@@ -108,10 +114,10 @@
                         <h3>Перфоратор BOSCH BFG 9000</h3>
                         <span class="popular-item-sale">32500 Р.</span>
                         <div class="popular-item-price">25500 Р.</div>
-                    </li>
-                </ul>
-                <ul class="catalog-list">
-                      <li class="catalog-item">
+                    </article>
+               
+               
+                       <article class="product-card">
                         <div class="catalog-item-new"><img src="img/bfg900.jpg" alt="Фотография перфоратора BOSCH BFG 9000"></div>
                         <div class="popular-item-controls">
                             <a class="popular-item-controls-btn " href="#">Купить</a> 
@@ -120,11 +126,11 @@
                         <h3>Перфоратор BOSCH BFG 9000</h3>
                         <span class="popular-item-sale">32500 Р.</span>
                         <div class="popular-item-price">25500 Р.</div>
-                    </li>
-                </ul>
+                    </article>
+               
                 
                 ...
-                
+                </section>
                 <ul class="pagination-list">
                     <li class="pagination-item"><a href="#">1</a></li>
                     <li class="pagination-item pagination-item-current"><a >2</a></li>
@@ -181,11 +187,11 @@
              </div>
         </footer>
         <section class="modal-cart">
-            <span class="modal-close">x</span><!--здесь будет крестик-->
+            <a class="modal-close" href="#">Назад</a> 
             <h2 class="modal-cart-title">Товар добавлен в корзину!</h2>
             <div class="modal-cart-bottom">
-                <a class="modal-button-current btn" href="#">Оформить заказ</a>
-                <span class="modal-button btn">Продолжить покупки</span>
+                <span class="modal-button-current btn">Оформить заказ</span>
+                <a class="modal-button btn" href="#">Продолжить покупки</a>
             </div>
         </section>
   </body>
