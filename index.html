@@ -48,7 +48,16 @@
                 <article class="features-item"><h2 class="features-item-title">Техника</h2><a class="features-item-btn btn" href="#">Для стройки</a></article>
                 <article class="features-slider features-col-left">
                      <div class="features-slider-arrows"></div>
-                     <div class="features-slider-controls"></div>
+                     <div class="features-slider-controls">
+                         <ul class="slider-switches">
+                             <li class="slide-radio">
+                                 <button type="button" class="slide-btn">Первый слайд</button>
+                             </li>
+                              <li class="slide-radio">
+                                 <button type="button" class="slide-btn">Второй слайд</button>
+                             </li>
+                         </ul>
+                     </div>
                      <div class="features-slider-inner">
                          <div class="features-slides">
                              <div class="features-slide-item">
@@ -230,7 +239,7 @@
         </footer>
         <section class="modal-write-us">
             <h2 class="visually-hidden">Напишите нам</h2>
-            <a class="modal-close" href="#">Назад</a><!--здесь будет крестик-->
+            <a class="modal-close" href="#">Закрыть</a><!--здесь будет крестик-->
             <form class="modal-write" action="https://echo.htmlacademy.ru" method="post">
                 <p class="modal-write-item">
                     <label for="write-name">Ваше имя:</label>
@@ -245,7 +254,7 @@
                     <textarea id="write-letter" name="letter" placeholder="В свободной форме"></textarea>
                 </p>
                 <div class="modal-write-bottom">
-                    <button type="submit" class="btn">Отправить</button>
+                    <button type="submit" class="modal-write-current btn">Отправить</button>
                 </div>
             </form>
             

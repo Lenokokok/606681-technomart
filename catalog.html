@@ -9,7 +9,10 @@
     <header class="main-header">
        <div class="main-header-bar">
           <a  class="main-header-logo" href="index.html">Техномарт</a>
-          <span class="button-search">Поиск</span><!-- Здесь будет форма -->
+          <form class="main-search" action="https://echo.htmlacademy.ru" method="post">
+              <button class="header-btn btn-search" type="submit"></button>
+              <input type="search" name="main-search" id="header-search" aria-label="Поле поиска по сайту" placeholder="Поиск:">
+          </form>
           <a class="header-btn btn-bookmarks" href="#" >Закладки</a>
           <a class="header-btn btn-basket-current" href="#" >Корзина</a>
           <a class="header-btn btn-order" href="#" >Оформить заказ</a>
@@ -58,37 +61,61 @@
             
             <section class="filters">
                 <h2 class="filters-title">Фильтр:</h2>
-                
-                <div class="filters-list">
-                    <h3 class="filters-title">Цена:</h3>
-                    <!--Здесь форма-->
-                </div>
-                <div class="filters-list">
-                    <h3 class="filters-title">Производители:</h3>
-                    <!--Здесь форма-->
-                </div>
-                <div class="filters-list">
-                    <h3 class="filters-title">Питание:</h3>
-                    <!--Здесь форма-->
-                </div>
-                <span class="filters-button">Показать</span>
-                
+                <form class="filter" action="https://echo.htmlacademy.ru>" method="get">
+                    <fieldset>
+                        <legend>Цена:</legend>
+                        <div class="filter-price"><!--здесь будет диапазон цен - "линия с кругляшами"--></div>
+                        <div class="price-range">
+                            <input class="price-value" type="text" value="0" name="value-min" id="price-min">>
+                            <div class="price-line"></div>
+                            <input class="price-value" type="text" value="30000" name="value-max" id="price-max">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Производители:</legend>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="BOSCH" id="filter-bosch" checked><label for="filter-bosch">Bosch</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Interskol" id="filter-interskol"><label for="filter-interskol">Интерскол</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Makita" id="filter-makita" checked><label for="filter-makita">Makita</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Dewalt" id="filter-dewalt"><label for="filter-dewalt">Dewalt</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Hitachi" id="filter-hitachi"><label for="filter-hitachi">Hitachi</label>
+                            </li>
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Питание:</legend>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="type-power" id="battery-type"><label for="battery-type">Аккумуляторные</label>
+                            </li>
+                             <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="type-power" id="electric-type"><label for="electric-type">Сетевые</label>
+                            </li>
+                    </fieldset>
+                    <button type="submit" class="filters-button button">Показать</button>
+                </form>
             </section>
             
             <section class="catalog">
               <header class="catalog-header">
                <h2 class="catalog-sort-title">Сортировка</h2>
-               
                   <ul class="catalog-sort-list">
-                   <li><span class="sort-button-current">по цене</span></li>
-                   <li><span class="sort-button">по типу</span></li>
-                   <li><span class="sort-button">по функционалу</span></li>
+                       <li><a class="sort-item" href="#">по цене</a></li>
+                       <li><a class="sort-item" href="#">по типу</a></li>
+                       <li><a class="sort-item" href="#">по функционалу</a></li>
                    </ul>
-               
                <div class="sort-direction">
                    <a class="sort-dir active" href="#">Вверх</a>
-                   <a class="sort-dir"></a>
+                   <a class="sort-dir">Вниз</a>
                </div>
+               
                 </header>
                 <section class="catalog-products">
                 <h2 class="visually-hidden">Каталог</h2>
@@ -219,11 +246,11 @@
              </div>
         </footer>
         <section class="modal-cart">
-            <a class="modal-close" href="#">Назад</a> 
+            <a class="modal-close" href="#">Закрыть</a><!--здесь будет крестик-->
             <h2 class="modal-cart-title">Товар добавлен в корзину!</h2>
             <div class="modal-cart-bottom">
-                <span class="modal-button-current btn">Оформить заказ</span>
-                <a class="modal-button btn" href="#">Продолжить покупки</a>
+                <a class="modal-cart-current btn" href="#">Оформить заказ</a>
+                <a class="modal-cart btn" href="#">Продолжить покупки</a>
             </div>
         </section>
   </body>
